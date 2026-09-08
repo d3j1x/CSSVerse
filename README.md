@@ -1,4 +1,12 @@
+![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)
+
+<div dir="rtl">
+
 # 🎨 عالم سي.اس.اس — CSSVerse
+
+<p align="center">
+  <img src="./assets/CSSVerseLogo.png" alt="CSSVerse Logo" width="220">
+</p>
 
 <p align="center">
   <strong>منصة تعليمية عربية حرة ومفتوحة المصدر لتعلّم CSS وتصميم صفحات الويب.</strong>
@@ -365,3 +373,5 @@ CSSVerse جزء من جهود نشر المعرفة التقنية باللغة 
 © 2026 CSSVerse
 
 </p>
+
+</div>
