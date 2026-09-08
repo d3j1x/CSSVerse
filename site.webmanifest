@@ -1,0 +1,16 @@
+{
+  "name": "CSSVerse",
+  "short_name": "CSSVerse",
+  "description": "منصة مجانية ومفتوحة المصدر لتعلم CSS باللغة العربية.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff3131",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

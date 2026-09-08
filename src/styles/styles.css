@@ -1,0 +1,111 @@
+* {
+ box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+
+}
+
+
+/* START HEADER */
+header .black {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #ff3131;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: large;
+  padding: 0px 4px;
+  background-color: black;
+  
+}
+
+header h1 {
+  text-align: center;
+  color:#ff3131;
+}
+/* ENDS HEADER */
+
+
+/* START MAIN */
+main {
+  display: block;
+  max-width: 1500px;
+  margin: 0 auto; /* centers horizontally */
+}
+
+
+/* START NAVBAR */
+.navbar {
+  background-color:  whitesmoke;
+  margin-top: 5vh;
+  border: red 2px solid;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px #ff3131;
+}
+
+
+.navbar .nav-links li {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s;
+  margin-top: 25px;
+}
+
+.navbar .nav-links li:hover {
+  
+  color: red;
+  
+}
+
+.navbar .nav-links li a{
+  text-decoration: none;
+  color: black;
+  
+}
+
+.navbar .nav-links  .second-navlinks li {
+  margin: 20px 0px;
+  
+}
+
+.navbar .nav-links  .second-navlinks li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+}
+
+.navbar .nav-links a:hover {
+  color: red;
+}
+
+.navbar .nav-links  .second-navlinks a:hover {
+  background-color: #ff3131;
+  border-radius: 4px;
+}
+/* ENDS NAVBAR */
+/* ENDS MAIN */
+
+
+
+/* START FOOTER */
+footer {
+  text-align: center;
+  font-weight: bold;
+}
+/* ENDS FOOTER */

@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+
+}
+
+
+/* START HEADER */
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.open-source {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  font-size: large;
+}
+
+.open-source a {
+  color: #ff3131;
+  text-decoration: none;
+}
+
+.opens {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 150px;
+  width: auto;
+  padding: 2px;
+}
+/* ENDS HEADER */
+
+/* START NAVBAR */
+nav {
+  background-color: whitesmoke;
+  padding: 5px;
+}
+
+
+.nav-links {
+  margin:5px 0;
+  color: whitesmoke;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  justify-content: space-around;
+  white-space: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-links:hover {
+  color: red;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color:#ff3131;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 1.5rem;
+}
+/* ENDS NAVBAR */
+
+
+
+/* START MAIN */
+main {
+  padding: 0px 20px;
+  min-height: 80vh;
+  display: block;
+  max-width: 1200px;
+  margin: 10px auto; /* centers horizontally */
+  
+}
+
+main h1 {
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.blur-box {
+  border: red  2px solid;
+  background: whitesmoke; /* semi-transparent background */
+  box-shadow: 0 1px 2px #ff3131;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: large;
+}
+
+.blur-box ul {
+  list-style: none;
+}
+/* ENDS MAIN */
+
+
+/* START FOOTER */
+footer {
+  text-align: center;
+  border-top:#ff3131  2px solid;
+  font-weight: bold;
+  padding: 8px;
+  margin-top: 100px;
+}
+
+footer .support {
+  font-size: xx-small;
+  font-weight: bold;
+}
+
+footer .support a{  
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ff3131, darkred);
+  border-radius: 4px;
+  padding: 2px;
+}
+/* ENDS FOOTER */
+
