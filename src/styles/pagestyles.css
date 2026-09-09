@@ -81,6 +81,11 @@ border-bottom: darkblue 2px solid;
   padding: 8px;
 }
 
+.file-name {
+  color: #ccc;
+  font-weight: 600;
+}
+
 .code-block code .tag {
   color: #ff6b6b;
 }
@@ -227,6 +232,11 @@ border-bottom: darkblue 2px solid;
 }
 
 
+.nw {
+  white-space: nowrap;
+}
+
+
 
 
 
@@ -255,243 +265,3 @@ footer {
   font-weight: bold;
 }
 /* ENDS FOOTER */
-
-
-
-
-
-
-
-
-
-
-
-
-.sourcecode,.errorcode, .rules, .sourcecode-css, .en-dir, .example-code {
-    direction: ltr;
-}
-
-.sourcecode pre span {
-    color: green;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.example-code pre span {
-  color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.example-code pre  {
-  background-color: #9aa6b2;
-  color: black;
-  padding: 2px;
-  overflow-x: auto;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
-  font-weight: bold;
-  line-height: 1.6;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  border: 1px solid white;
-}
-
-
-.help-code p {
-  direction: ltr;
-  text-align: right;
-}
-
-.sourcecode pre {
-  background: #0f111a; /* sleek deep navy instead of plain black */
-  color: #e6e6e6;
-  padding: 1.25rem 1.5rem;
-  border-radius: 12px;
-  overflow-x: auto;
-  font-family: "Fira Code", monospace;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  position: relative;
-}
-
-/* Optional: add a soft gradient bar at the top (like VS Code tabs) */
-.sourcecode pre::before {
-  content: "";
-  display: block;
-  height: 10px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  /* background: linear-gradient(90deg, #ff5f56, #ffbd2e, #27c93f); */
-  background-color: green;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-/* Slightly dim scrollbars for better aesthetics */
-.sourcecode pre::-webkit-scrollbar {
-  height: 8px;
-}
-.sourcecode pre::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-}
-.sourcecode pre::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.25);
-}
-
-
-
-
-
-
-.sourcecode-css pre span {
-    color: yellowgreen;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-.sourcecode-css pre {
-  background: #2a2a72;     /* dark background */
-  color: #dcdcdc;          /* light text */
-  padding: 1em;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: "Fira Code", monospace;
-  font-size: 1rem;
-}
-
-
-
-
-.errorcode pre {
-  background: #2d1e1e;     /* dark background */
-  color: #ff6c6b;          /* light text */
-  padding: 1em;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: "Fira Code", monospace;
-  font-size: 1rem;
-  position: relative;
-}
-
-
-
-.errorcode pre span {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-
-
-
-
-.rules {
-  text-align: center;
-  background-color: yellowgreen;
-}
-.translate {
-  text-align: center;
-  background-color: yellow;
-}
-
-
-
-
-
-
-.long-code {
-  display: block;
-  background-color: white;
-  direction: ltr;
-  overflow-x: auto;
-  color: #071023;
-  font-size: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  margin: auto;
-  text-align: right;
-}
-
-.code-block-2 {
-  direction: ltr;
-  overflow-x: auto;
-  font-size: 1rem;
-  min-width: 100%;
-  text-align: right;
-  
-}
-
-
-
-.code-block-2 pre {
-  overflow-x: auto;
- 
-}
-
-.code-block-2 * {
-  display: inline;
-}
-
-.code-block-2 code {
-  color: black;
-  line-height: 1.8;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 1.2rem;
-  
-}
-
-
-
-
-
-.help-code {
-  display: block;
-  direction: ltr;
-  overflow-x: auto;
-  
-}
-
-
-form {
-  margin-right: 10px;
-  border: white solid 2px;
-  border-radius: 2%;
-  padding: 4px;
-}
-
-.preview-eng{
-  direction: ltr;
-  background-color: rgba(255,255,255,0.04);
-  border: white 4px solid;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px #9aa6b2;
-  padding: 20px;
-  overflow-x: auto;
-}
-
-
-.br-help {
-  background-color: white;
-  border: black 1px dotted;
-}
-
-.english-txt  {
-  direction: ltr;
-  text-align: right;
-}
-
-
-
-
-
-
-
-
-
-.nw {
-  white-space: nowrap;
-}
