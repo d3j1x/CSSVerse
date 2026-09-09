@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="أساسيات CSS |  ما هي لغة CSS, وما هو دورها في الويب؟"/>
     <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/othersStyles/What-Is-CSS-and-What-Is-Its-Role-On-The-Web.css">
 	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
 	<title>CSSVerse | الأساسيات</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,11 +32,347 @@
 	<section class="sub-title">
 		<h2>ما هي لغة CSS, وما هو دورها في الويب؟</h2>
 		<span class="hint">نظري</span>
-		<p>قريبًا</p>
+		<p></p>
     </section>
 
 	<section>
+        <p>
+			تُعد CSS - وهي اختصار لـ Cascading Style Sheets (أوراق الأنماط المتتالية) - عنصراً جوهرياً في تطوير الويب الحديث; فهي لغة لتنسيق الصفحات تُستخدم لإضفاء الأنماط والمظهر الجمالي على عناصر HTML . وببساطة, إذا كانت HTML تمثل هيكل صفحة الويب، فإن CSS هي التي تمنحها مظهراً جذاباً.
+		</p>
+		<p class="hinty">
+			إليك مثال على "تنسيق شريط التنقل" (styling a navbar) .
+		</p>
+		<p class="hinty">
+			<b>ملاحظة:</b> لا تقلق بشأن محاولة فهم كود CSS في الوقت الحالي; إذ ستتعلم كيفية عمل كل هذا في الدروس وورش العمل القادمة. الهدف هنا هو مجرد إعطائك فكرة عما يمكنك تحقيقه باستخدام القليل من CSS .
+		</p>
+
+
+		<div class="codeFiles">
+            <p class="userstory">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> /&gt;
+
+&lt;nav <span class="attr">class=<span class="value">"navbar"</span></span>&gt;
+ &lt;ul <span class="attr">class=<span class="value">"nav-links"</span></span>&gt;
+  &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">الرئيسية</span>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">نبذة عنا</span>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">خدمات</span>&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a <span class="attr">href=<span class="value">"#"</span></span>&gt;<span class="txt">اتصال</span>&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;</span>
+            </code></pre></div>
+
+            <p class="userstory">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">*</span> <span class="attr"> {
+  margin: <span class="txt">0</span>;
+  padding: <span class="txt">0</span>;
+  box-sizing: <span class="txt">border-box</span>;
+}</span>
+
+<span class="tag">body</span> <span class="attr"> {
+  font-family: <span class="txt">'Segoe UI', sans-serif</span>;
+  background-color: <span class="txt">#f4f4f4</span>;
+}</span>
+
+<span class="tag">.navbar</span> <span class="attr"> {
+  display: <span class="txt">flex</span>;
+  justify-content: <span class="txt">space-between</span>;
+  align-items: <span class="txt">center</span>;
+  background-color: <span class="txt">#333</span>;
+  padding: <span class="txt">1rem 2rem</span>;
+  color: <span class="txt">white</span>;
+}</span>
+
+<span class="tag">.navbar .logo</span> <span class="attr"> {
+  font-size: <span class="txt">1.5rem</span>;
+  font-weight: <span class="txt">bold</span>;
+}</span>
+
+<span class="tag">.nav-links</span> <span class="attr"> {
+  list-style: <span class="txt">none</span>;
+  display: <span class="txt">flex</span>;
+  gap: <span class="txt">1.5rem</span>;
+}</span>
+
+<span class="tag">.nav-links a</span> <span class="attr"> {
+  color: <span class="txt">white</span>;
+  text-decoration: <span class="txt">none</span>;
+  font-weight: <span class="txt">500</span>;
+  transition: <span class="txt">color 0.3s ease</span>;
+}</span>
+
+<span class="tag">.nav-links a:hover</span> <span class="attr"> {
+  color: <span class="txt">#ff9800</span>;
+}</span>
+            </code></pre></div>
         
+		</div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+				<div class="body1">
+					<nav class="navbar1">
+						<ul class="nav-links1">
+							<li><a href="#">الرئيسية</a></li>
+							<li><a href="#">نبذة عنا</a></li>
+							<li><a href="#">خدمات</a></li>
+							<li><a href="#">اتصال</a></li>
+						</ul>
+					</nav>
+				</div>
+        </div>
+
+		<br>
+
+		<p>
+			يتمثل الدور الأساسي لـ CSS في فصل محتوى صفحة الويب عن مظهرها المرئي; إذ يتيح هذا الفصل لمطوري الويب إنشاء مواقع ويب أكثر مرونة وسهولة في الصيانة.
+		</p>
+		<p>
+			باستخدام CSS، يمكنك التحكم في "التخطيط" (layout) و"الألوان" (colors) و"الخطوط" (fonts) و"المظهر المرئي العام" (overall visual appearance) لصفحات الويب دون تعديل هيكلية HTML .
+		</p>
+		<p>
+			لنأخذ مثالاً بسيطاً للتقريب; إذا تخيلتَ الموقع الإلكتروني كمنزل، فإن لغة HTML تمثل "الأساس والهيكل" (foundation and framework) ، بينما تمثل CSS الطلاء وورق الحائط والزخارف التي تضفي على المنزل مظهراً جذاباً ومميزاً.
+		</p>
+		<p>
+			تعمل CSS عن طريق تحديد عناصر HTML وتطبيق "الأنماط" (styles) عليها.
+		</p>
+		<p class="hinty">
+			إليك مثال يوضح عنصر زر <span class="br-spec">button</span> "غير مُنسَّق" (unstyled) وآخر "مُنسَّق" (styled) .
+		</p>
+
+
+		<div class="codeFiles">
+            <p class="userstory">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> /&gt;
+
+&lt;button <span class="attr">class=</span><span class="value">"regular-btn"</span>&gt;<span class="txt">زر غير منسق</span>&lt;/button&gt;
+&lt;button <span class="attr">class=</span><span class="value">"round-btn"</span>&gt;<span class="txt">زر دائري</span>&lt;/button&gt;</span>
+            </code></pre></div>
+
+            <p class="userstory">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">.round-btn</span> <span class="attr"> {
+  font-size: <span class="txt">1rem</span>;
+  font-family: <span class="txt">'Segoe UI', sans-serif</span>;
+  border: <span class="txt">none</span>;
+  cursor: <span class="txt">pointer</span>;
+  transition: <span class="txt">background-color 0.3s ease, transform 0.2s ease</span>;
+  background-color: <span class="txt">#2ecc71</span>;
+  color: <span class="txt">white</span>;
+  border-radius: <span class="txt">50px</span>;
+  padding: <span class="txt">0.6rem 1.6rem</span>;
+}</span>
+
+<span class="tag">.round-btn:hover</span> <span class="attr"> {
+  background-color: <span class="txt">#27ae60</span>;
+  transform: <span class="txt">translateY(-2px)</span>;
+}</span>
+            </code></pre></div>
+        
+		</div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<button class="regular-btn1">زر غير منسق</button>
+			<button class="round-btn1">زر دائري</button>
+        </div>
+
+		<br>
+
+		<p>
+			يمكن أن تتضمن هذه "الأنماط" (styles) خصائص مثل "اللون" (color) و"حجم الخط" (font size) وغيرها الكثير. ومن خلال تغيير هذه "الخصائص" (properties) ، يمكنك تعديل مظهر صفحة الويب بشكل جذري دون تغيير محتواها.
+		</p>
+		<p>
+			تُعد القدرة على إنشاء "تصميمات متجاوبة" (responsive designs) واحدةً من أقوى ميزات CSS .
+		</p>
+		<p>
+			وهذا يعني أنه باستخدام CSS ، يمكنك جعل موقعك الإلكتروني يبدو رائعاً على أي جهاز، سواء كان جهاز كمبيوتر مكتبياً أو جهازاً لوحياً أو هاتفاً ذكياً.
+		</p>
+		<p>
+			تتيح لك تقنية CSS تعديل "التخطيطات" (layouts) و"أحجام الخطوط" (font sizes) و"العناصر المرئية الأخرى" (other visual elements) بناءً على "حجم شاشة الجهاز" (screen size) الذي يعرض الموقع الإلكتروني.
+		</p>
+		<p class="hinty">
+			حاول تعديل حجم نافذة المعاينة لترى كيف يتكيف "التخطيط" (layout) مع "حجم الشاشة" (screen size) .
+		</p>
+
+		<div class="codeFiles">
+            <p class="userstory">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span> /&gt;
+
+&lt;header <span class="attr">class=<span class="value">"header"</span></span>&gt;
+ &lt;h1&gt;<span dir="rtl" class="txt">مرحبًا بكم في موقعي المتجاوب</span>&lt;/h1&gt;
+ &lt;p&gt;<span dir="rtl" class="txt">يتكيف هذا التخطيط مع حجم شاشتك!</span>&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;main <span class="attr">class=<span class="value">content</span></span>&gt;
+ &lt;section <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">صندوق 1</span>&lt;/section&gt;
+ &lt;section <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">صندوق 2</span>&lt;/section&gt;
+ &lt;section <span class="attr">class=<span class="value">"box"</span></span>&gt;<span class="txt">صندوق 3</span>&lt;/section&gt;
+&lt;/main&gt;</span>
+            </code></pre></div>
+
+            <p class="userstory">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag">body</span> <span class="attr"> {
+  margin: <span class="txt">0</span>;
+  font-family: <span class="txt">'Segoe UI', sans-serif</span>;
+  background-color: <span class="txt">#f9f9f9</span>;
+  color: <span class="txt">#333</span>;
+}
+
+<span class="tag">.header</span> {
+  background-color: <span class="txt">#4CAF50</span>;
+  color: <span class="txt">white</span>;
+  padding: <span class="txt">2rem</span>;
+  text-align: <span class="txt">center</span>;
+}
+
+<span class="tag">.content</span> {
+  display: <span class="txt">flex</span>;
+  gap: <span class="txt">1rem</span>;
+  padding: <span class="txt">1rem</span>;
+  justify-content: <span class="txt">center</span>;
+}
+
+<span class="tag">.box</span> {
+  flex: <span class="txt">1</span>;
+  min-width: <span class="txt">200px</span>;
+  background-color: <span class="txt">#ddd</span>;
+  padding: <span class="txt">2rem</span>;
+  text-align: <span class="txt">center</span>;
+  font-size: <span class="txt">1.2rem</span>;
+  border-radius: <span class="txt">8px</span>;
+  transition: <span class="txt">background-color 0.3s</span>;
+}
+
+<span class="tag">.box:hover</span> {
+  background-color: <span class="txt">#ccc</span>;
+}</span>
+
+<span class="value">/* Responsive: for tablets and below (≤ 768px) */</span>
+<span dir="rtl" class="value">/* متجاوب: للأجهزة اللوحية وما دونها (≤ 768px) */</span>
+
+<span class="tag">@media <span class="attr">(max-width: 768px)</span> {
+ .content <span class="attr">{
+  flex-direction: <span class="txt">column</span>;
+  align-items: <span class="txt">center</span>;
+ }</span>
+
+ .box <span class="attr">{
+  width: <span class="txt">90%</span>;
+  font-size: <span class="txt">1.1rem</span>;
+ }</span>
+}</span>
+
+<span class="value">/* Responsive: for phones (≤ 480px) */</span>
+<span dir="rtl" class="value">/* متجاوب: للهواتف (≤ 480px) */</span>
+
+<span class="tag">@media <span class="attr">(max-width: 768px)</span> {
+ .header <span class="attr">{
+  padding: <span class="txt">1.5rem 1rem</span>;
+ }</span>
+
+ .header h1 <span class="attr">{
+  font-size: <span class="txt">1.5rem</span>;
+ }</span>
+
+ .header p <span class="attr">{
+  font-size: <span class="txt">1rem</span>;
+ }</span>
+
+ .box <span class="attr">{
+  font-size: <span class="txt">1rem</span>;
+  padding: <span class="txt">1.5rem</span>;
+ }</span>
+}</span>
+
+            </code></pre></div>
+        
+		</div>
+
+        <p class="hinty">معاينة:</p>
+
+        <div class="preview" role="presentation">
+			<div class="body3">
+			<div class="header3">
+				<h1>مرحبًا بكم في موقعي المتجاوب</h1>
+				<p>يتكيف هذا التخطيط مع حجم شاشتك!</p>
+			</div>
+
+			<div class=content3>
+				<section class="box3">صندوق 1</section>
+				<section class="box3">صندوق 2</section>
+				<section class="box3">صندوق 3</section>
+			</div>
+			</div>
+        </div>
+
+		<br>
+
+		<p>
+			من الميزات المهمة الأخرى لـ CSS طبيعتها "التتابعية" (أو المتسلسلة)، وهي السمة التي استمدت منها اسمها (حيث تشير كلمة "Cascading" إلى هذا التتابع).
+		</p>
+		<p>
+			وهذا يعني أنه يمكن توريث الأنماط وتجاوزها، مما يتيح بناء "هيكل هرمي للأنماط" (a hierarchical structure of styling) . وسوف تتعرف على المزيد حول كيفية عمل ذلك في الدروس القادمة.
+		</p>
+		<p>
+			تدعم CSS أيضاً استخدام "ملفات أنماط خارجية" (external stylesheets) .
+		</p>
+		<p>
+			وهذا يعني أنه يمكنك الاحتفاظ بجميع "قواعد التنسيق" (styling rules) في ملف منفصل، ومن ثم ربطه بصفحات HTML متعددة.
+		</p>
+		<p>
+			تعزز هذه الميزة بشكل كبير من سهولة صيانة المواقع الإلكترونية, ولا سيما الكبيرة منها; فبدلاً من الاضطرار إلى تعديل الأنماط في كل صفحة على حدة، يمكنك إجراء التغييرات في ملف CSS واحد لتنعكس آثارها على جميع الصفحات المرتبطة به.
+		</p>
+		<p>
+			في عالم تطوير الويب, تلعب لغة CSS دوراً حيوياً في إنشاء مواقع إلكترونية جذابة بصرياً, ومتجاوبة, وسهلة الاستخدام.
+		</p>
+		<p>
+			يتيح للمطورين تحويل مستندات HTML البسيطة إلى تجارب ويب تفاعلية وجذابة، تستحوذ على انتباه المستخدمين وتعزز تفاعلهم مع محتوى الويب.
+		</p>
+
+
+		<!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ما هو الغرض الأساسي من CSS في تطوير الويب؟</p>
+
+			<p> 1. لـ"هيكلة" (structure) محتوى صفحات الويب. ❌</p>
+            <p> 2. للتعامل مع "المنطق البرمجي من جهة الخادم" (server-side logic) . ❌</p>
+            <p><mark> <b>3. للفصل بين "عرض المستند" (the presentation of a document) ومحتواه.</b> ✅</mark></p>
+			<p> 4. لإدارة "عمليات قواعد البيانات" (database operations) . ❌</p>
+
+            <br>
+
+            <p class="userstory">كيف تساهم CSS في "تصميم الويب المتجاوب" (Responsive Web Design) ؟</p>
+			
+			<p> 1. من خلال التعامل مع "مصادقة المستخدم" (user authentication) . ❌</p>
+            <p><mark> <b>2. من خلال السماح بتعديل "التخطيط" (layout) و"التنسيق" (styling) بناءً على "حجم شاشة الجهاز" (device screen size) .</b> ✅</mark></p>
+            <p> 3. من خلال تحسين "وقت استجابة الخادم" (server response time) . ❌</p>
+			<p> 4. من خلال "ضغط ملفات الصور" (compressing image files) . ❌</p>
+
+            <br>
+
+            <p class="userstory">ما المقصود بـ"الطبيعة "التتابعية" (Cascading nature) في CSS ؟</p>
+			
+			<p> 1. يشير إلى الطريقة التي تنسدل بها المياه في خلفية الموقع الإلكتروني. ❌</p>
+            <p> 2. يعني ضرورة ترتيب ملفات CSS وفق تسلسل محدد. ❌</p>
+            <p><mark> <b>3. يسمح بتوريث الأنماط وتجاوزها (استبدالها) بأسلوب هرمي.</b> ✅</mark></p>
+			<p> 4. يصف سرعة تحميل CSS في المتصفح. ❌</p>
+
+		</section>	
+
+
+
+
+
+			
     </section>
 
 
