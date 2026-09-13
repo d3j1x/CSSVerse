@@ -4,6 +4,7 @@
 
     <!-- Primary Meta Tags -->
     <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
     <title>CSS VERSE عالم سي.اس.اس</title>
     <meta name="description" content="تعلم CSS بالعربية بطريقة أكاديمية ومجانية">
     <meta name="version" content="0.0.1">
@@ -178,7 +179,7 @@
     <footer>
       <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
       
-      <p class="support"><strong>مدعومة من منظمة <a href="https://www.linkedin.com/company/openarabtech/" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
     </footer>
     <!--Ends Footer-->
 
@@ -189,6 +190,9 @@
 
 
 
+  <script>
+  document.getElementById("myLink").href = SITE_LINK;
+  </script>
 
   </body>
 </html>

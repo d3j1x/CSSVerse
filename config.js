@@ -1,0 +1,1 @@
+const SITE_LINK = "https://openarabtech.github.io/";
