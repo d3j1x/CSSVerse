@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="أساسيات CSS |  ما هي لغة CSS, وما هو دورها في الويب؟"/>
     <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <script src="../../../config.js"></script>
     <link rel="stylesheet" href="../../styles/others/basicsStyles/What-Is-CSS-and-What-Is-Its-Role-On-The-Web.css">
 	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
 	<title>CSSVerse | الأساسيات</title>
@@ -392,11 +393,13 @@
     <footer>
       <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
       
-      <p class="support"><strong>مدعومة من منظمة <a href="https://www.linkedin.com/company/openarabtech/" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
     </footer>
 <!--Ends Footer-->
 
-
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
 
 </body>
 </html>

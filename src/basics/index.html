@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="أساسيات سي.اس.اس"/>
     <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../../config.js"></script>
 	<link rel="icon" type="image/x-icon" href="../../favicon.png">
 	<title>CSSVerse | الأساسيات</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -166,7 +167,7 @@
     <footer>
       <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
       
-      <p class="support"><strong>مدعومة من منظمة <a href="https://www.linkedin.com/company/openarabtech/" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
     </footer>
 <!--Ends Footer-->
 
@@ -178,7 +179,9 @@
 
 
 
-
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
 
 
 </body>
