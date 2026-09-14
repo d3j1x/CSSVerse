@@ -113,6 +113,10 @@ main h1 {
   margin: 100px 0px;
 }
 
+main h2 {
+  margin-block: 20px;
+}
+
 .blur-box {
   border: red  2px solid;
   background: whitesmoke; /* semi-transparent background */
