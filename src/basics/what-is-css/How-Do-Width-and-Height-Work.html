@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | كيف تعمل خاصيتا العرض (width) والارتفاع (height) ؟ "/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/How-Do-Width-and-Height-Work.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+    <h1>ما هي لغة CSS ؟</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+  <!-- sub-title -->
+	<section class="sub-title">
+		<h2>كيف تعمل خاصيتا العرض (width) والارتفاع (height) ؟</h2>
+		<span class="hint">نظري</span>
+		<p></p>
+    </section>
+
+    <section>
+        <p>
+            في CSS، تُستخدم الخاصيتان العرض <span dir="ltr" class="br-spec nw">width</span> و الارتفاع <span dir="ltr" class="br-spec nw">height</span> للتحكم في "أبعاد العناصر" (dimensions of elements) على صفحة الويب.
+        </p>
+        <p>
+            يمكن تحديد هذه الخصائص بوحدات مختلفة، مثل "البكسل" (pixels) - <span dir="ltr" class="br-spec nw">px</span> , والنسب المئوية <span dir="ltr" class="br-spec nw">%</span> , و"وحدات منطقة العرض" (viewport units) - <span dir="ltr">(<span class="br-spec">vw</span>, <span class="br-spec">vh</span>)</span> , وغيرها.
+        </p>
+        <p>
+            تُحدد الخاصية <span dir="ltr" class="br-spec nw">width</span> عرض العنصر. وفي حال عدم تحديد العرض، 
+            تُضبط القيمة الافتراضية على <span dir="ltr" class="br-spec nw">auto</span> ; مما يتيح للمتصفح تحديد عرض العنصر بناءً على محتواه, والعنصر "الأب" (parent) , و"نوع العرض" (display type). 
+            وبالنسبة لعنصر <span dir="ltr" class="br-spec nw">div</span> , تؤدي القيمة <span dir="ltr" class="br-spec nw">width: auto</span> إلى تمدد العنصر ليملأ العرض الكامل "للحاوية الأب" (parent container) .
+        </p>
+        <p>
+            تُحدِّد الخاصية <span dir="ltr" class="br-spec nw">height</span> ارتفاع العنصر. وبالمثل، تكون قيمة الارتفاع <span dir="ltr" class="br-spec nw">auto</span> (تلقائية) بشكل افتراضي، مما يعني أنها تتكيف مع المحتوى الموجود بداخل العنصر.
+        </p>
+        <p class="hinty">
+            إليك مثال يستخدم خاصيتي العرض <span dir="ltr" class="br-spec nw">width</span> والارتفاع <span dir="ltr" class="br-spec nw">height</span> :
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">.box</span> <span class="attr">{
+   width: <span class="txt">100px</span>;
+   height: <span class="txt">100px</span>;
+   background-color: <span class="txt">skyblue</span>;
+  }</span>
+ &lt;style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;&lt;/div&gt;
+&lt;/body&gt;</span>
+        </code></pre></div>
+
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">	
+            <div class="box1"></div>
+        </div>
+
+        <br>
+
+        <p>
+            في هذا المثال، لدينا عنصر <span dir="ltr" class="br-spec nw">div</span> يحمل الفئة (class) المسماة <span dir="ltr" class="br-spec nw">box</span> . 
+سيشغل هذا العنصر مساحة عرضها وارتفاعها "100 بكسل" <span dir="ltr" class="br-spec nw">100px</span> ، وسيكون "لون خلفيته" (background color) أزرق سماوياً <span dir="ltr" class="br-spec nw">skyblue</span> .
+        </p>
+        <p>
+            تُعد "البكسلات" (Pixels) وحدة قياس "ثابتة الحجم" (fixed-size) في CSS، وتوفر تحكماً دقيقاً في "الأبعاد" (dimensions).
+        </p>
+        <p>
+            تُحدد الخاصية <span dir="ltr" class="br-spec nw">min-width</span> الحد الأدنى لعرض العنصر; فحتى لو كان المحتوى الداخلي أصغر، لن يتقلص العنصر إلى ما دون هذه القيمة.
+        </p>
+        <p>
+            تُحدد الخاصية <span dir="ltr" class="br-spec nw">min-height</span> الحد الأدنى لارتفاع العنصر، وتضمن عدم انخفاض ارتفاعه عن القيمة المحددة.
+        </p>
+
+        <p class="hinty">إليك مثال:</p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">.box</span> <span class="attr">{
+   width: <span class="txt">50px</span>;
+   min-width: <span class="txt">100px</span>;
+   height: <span class="txt">50px</span>;
+   min-height: <span class="txt">100px</span>;
+   background-color: <span class="txt">lightcoral</span>;
+  }</span>
+ &lt;style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;&lt;/div&gt;
+&lt;/body&gt;</span>
+        </code></pre></div>
+
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">	
+            <div class="box2"></div>
+        </div>
+        <br>
+
+        <p>
+            يوضح المثال أعلاه كيفية عمل <span dir="ltr" class="br-spec nw">min-width</span> و <span dir="ltr" class="br-spec nw">min-height</span> .
+        </p>
+        <p>
+            على الرغم من ضبط "عرض" <span dir="ltr" class="br-spec nw">width</span> الصندوق و"ارتفاعه" <span dir="ltr" class="br-spec nw">height</span> عند "50 بكسل" <span dir="ltr" class="br-spec nw">50px</span> , 
+            إلا أن أبعاده الفعلية ستكون "100 بكسل في 100 بكسل" <span dir="ltr">(<span class="br-spec">100px</span> By <span class="br-spec">100px</span>)</span> ; 
+            وذلك لأن الحد الأدنى للعرض <span dir="ltr" class="br-spec nw">min-width</span> والحد الأدنى للارتفاع <span dir="ltr" class="br-spec nw">min-height</span> مضبوطان عند "100 بكسل" <span dir="ltr" class="br-spec nw">100px</span> 
+            , وهي قيم أكبر من "العرض" <span dir="ltr" class="br-spec nw">width</span> و"الارتفاع" <span dir="ltr" class="br-spec nw">height</span> المحددين.
+        </p>
+        <p>
+            تذكر أنه إذا كانت قيمتا <span dir="ltr" class="br-spec nw">min-width</span> أو <span dir="ltr" class="br-spec nw">min-height</span> أكبر من قيمتي "العرض" <span dir="ltr" class="br-spec nw">width</span> أو "الارتفاع" <span dir="ltr" class="br-spec nw">height</span> , 
+فإنهما ستطغيان على القيم الأصغر; وهذا يضمن عدم صغر حجم العناصر بشكل مفرط، وهو أمر مهم للحفاظ على تصميم متسق وقابل للاستخدام.
+        </p>
+        <p>
+            تُحدِّد الخاصية <span dir="ltr" class="br-spec nw">max-width</span> أقصى عرض يمكن أن يصل إليه العنصر, حتى وإن توفرت مساحة كافية ليكون أعرض من ذلك.
+        </p>
+        <p>
+            تُحدِّد الخاصية <span dir="ltr" class="br-spec nw">max-height</span> أقصى ارتفاع يمكن أن يصل إليه العنصر، بغض النظر عن حجم المحتوى.
+        </p>
+
+        <p class="hinty">إليك مثال:</p>
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;head&gt;
+ &lt;style&gt;
+  <span class="tag-b">.box</span> <span class="attr">{
+   width: <span class="txt">200px</span>;
+   max-width: <span class="txt">150px</span>;
+   height: <span class="txt">200px</span>;
+   max-height: <span class="txt">150px</span>;
+   background-color: <span class="txt">lightgreen</span>;
+  }</span>
+ &lt;style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;div <span class="attr">class=<span class="value">"box"</span></span>&gt;&lt;/div&gt;
+&lt;/body&gt;</span>
+        </code></pre></div>
+
+        
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">	
+            <div class="box3"></div>
+        </div>
+        <br>
+
+        <p>
+            يوضح المثال أعلاه كيف تتجاوز الخاصيتان <span dir="ltr" class="br-spec nw">max-width</span> و <span dir="ltr" class="br-spec nw">max-height</span> 
+            الخاصيتين <span dir="ltr" class="br-spec nw">width</span> و <span dir="ltr" class="br-spec nw">height</span>. 
+            فعلى الرغم من ضبط أبعاد الصندوق لتكون <span dir="ltr">(<span class="br-spec">200px</span> By <span class="br-spec">200px</span>)</span> , 
+            إلا أن أبعاده الفعلية ستكون <span dir="ltr">(<span class="br-spec">150px</span> By <span class="br-spec">150px</span>)</span> ; 
+            وذلك لأن القيم المحددة لـ <span dir="ltr" class="br-spec nw">max-width</span> و <span dir="ltr" class="br-spec nw">max-height</span> هي <span dir="ltr" class="br-spec nw">150px</span> ، 
+            وهي قيمة أصغر.
+        </p>
+        <p>
+            تذكر أنه عندما تكون قيمتا <span dir="ltr" class="br-spec nw">max-width</span> أو <span dir="ltr" class="br-spec nw">max-height</span> أصغر من <span dir="ltr" class="br-spec nw">width</span> أو <span dir="ltr" class="br-spec nw">height</span> , فإن لهما الأولوية; ويُعد هذا أمراً مهماً للتحكم في الحد الأقصى لحجم العناصر في تخطيطاتك.
+        </p>
+        <p>
+            تمنح CSS الأولوية لـ <span dir="ltr" class="br-spec nw">min-width</span> و <span dir="ltr" class="br-spec nw">min-height</span> على <span dir="ltr" class="br-spec nw">width</span> و <span dir="ltr" class="br-spec nw">height</span> ; بينما تعمل <span dir="ltr" class="br-spec nw">max-width</span> و <span dir="ltr" class="br-spec nw">max-height</span> على تقييد الأبعاد إذا تجاوزت القيم الحدود المحددة لهما.
+        </p>
+        <p>
+            على سبيل المثال, إذا قمت بتعيين العرض <span dir="ltr" class="br-spec nw">width</span> عند <span dir="ltr" class="br-spec nw">600px</span> والحد الأقصى للعرض <span dir="ltr" class="br-spec nw">max-width</span> عند <span dir="ltr" class="br-spec nw">500px</span> , 
+            فسيقتصر عرض العنصر على <span dir="ltr" class="br-spec nw">500px</span> ; إذ تتجاوز قيمة <span dir="ltr" class="br-spec nw">max-width</span> الإعداد الخاص بالعرض الأكبر, 
+            مما يُبقي العنصر ضمن الحد الأقصى المحدد للحجم.
+        </p>
+        <p>
+            يضمن ذلك بقاء العناصر ضمن نطاقات الحجم المطلوبة، بغض النظر عن قيم العرض والارتفاع القياسية.
+        </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+		<section class="questions">
+			<p class="pquestions">أسئلة :</p>
+				
+			<p class="userstory">ماذا سيحدث إذا قمت بتعيين <span dir="ltr" class="br-spec nw">width: 600px</span> و <span dir="ltr" class="br-spec nw">max-width: 500px</span> لعنصر <span dir="ltr" class="br-spec nw">div</span> ؟</p>
+
+			<p> 1. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">600px</span> . ❌</p>
+            <p><mark> 2. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">500px</span> . ✅</mark></p>
+            <p> 3. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">550px</span> . ❌</p>
+			<p> 4. سيكون عرض العنصر <span dir="ltr" class="br-spec nw">100px</span> . ❌</p>
+
+            <br>
+
+            <p class="userstory">إذا قمت بتعيين <span dir="ltr" class="br-spec nw">min-height: 200px</span> و <span dir="ltr" class="br-spec nw">height: 150px</span> لعنصر ما، فماذا سيكون ارتفاع هذا العنصر؟</p>
+			
+			<p> 1. <span dir="ltr" class="br-spec nw">150px</span> ❌</p>
+            <p> 2. <span dir="ltr" class="br-spec nw">100px</span> ❌</p>
+            <p><mark> 3. <span dir="ltr" class="br-spec nw">200px</span> ✅</mark></p>
+			<p> 4. <span dir="ltr" class="br-spec nw">250px</span> ❌</p>
+
+            <br>
+
+            <p class="userstory">أيٌّ مما يلي ليس وحدةً صالحةً تُستخدم مع الخاصية <span dir="ltr" class="br-spec nw">width</span> ؟</p>
+			
+			<p><mark> 1. <span dir="ltr" class="br-spec nw">hv</span> ✅</mark></p>
+			<p> 2. <span dir="ltr" class="br-spec nw">px</span> ❌</p>
+            <p> 3. <span dir="ltr" class="br-spec nw">%</span> ❌</p>
+			<p> 4. <span dir="ltr" class="br-spec nw">vw</span> ❌</p>
+		</section>
+
+
+  
+
+
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./What-Are-Inline-Internal-and-External-CSS-and When-Should-You-Use-Each-One.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+
+</body>
+</html>

@@ -148,11 +148,12 @@ margin: 10px 0px;
 }
 
 .br-spec {
-  border: green double 2px;
+  border: green solid 2px;
   padding:0px 1px;
   font-weight: 700;
   background-color: white;
   color: black;
+  font-size: medium;
 }
 
 
@@ -311,6 +312,10 @@ footer .support a{
 @media (max-width: 768px) {
   body {
     font-size: medium;
+  }
+
+  .br-spec {
+  font-size: small;
   }
 
   
