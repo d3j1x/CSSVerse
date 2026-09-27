@@ -1,0 +1,31 @@
+/* PREVIEW 1 */
+.preview1 a:link {
+ color: blue;
+}
+
+.preview1 a:visited {
+ color: purple;
+}
+
+
+/* PREVIEW 3 */
+.preview3 a:link {
+    color: blue;
+    text-decoration: none;
+    border-bottom: 1px solid blue;
+}
+
+.preview3 a:visited {
+    color: purple;
+    border-bottom: 1px solid purple;
+}
+
+
+/* PREVIEW 4 */
+.preview4 a:hover {
+    color: red;
+}
+
+.preview4 a:active {
+    color: darkorange;
+}
