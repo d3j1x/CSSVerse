@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | لماذا تُعدّ أنماط الروابط الافتراضية (Default Link Styles) مهمة لسهولة الاستخدام على الويب؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/styling-lists-and-links/Why-Are-Default-Link-Styles-Important-for-Usability-on-the-Web.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>تنسيق القوائم (Lists) والروابط (Links)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>لماذا تُعدّ أنماط الروابط الافتراضية (Default Link Styles) مهمة لسهولة الاستخدام على الويب؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+    <section>
+        <p>
+            تلعب أنماط الروابط الافتراضية (Default link styles) دوراً حاسماً في تعزيز سهولة الاستخدام وإمكانية الوصول (accessibility) على الويب.
+        </p>
+        <p>
+            لقد أصبحت هذه الأنماط (styles) — التي عادةً ما تكون باللون الأزرق للروابط غير المُزارة (unvisited links) وباللون الأرجواني للروابط المُزارة (visited links) — معياراً يتوقعه المستخدمون ويعتمدون عليه عند تصفح المواقع الإلكترونية.
+        </p>
+        <p>
+            يتمثل الغرض الأساسي من أنماط الروابط الافتراضية (default link styles) في توفير مؤشرات بصرية واضحة (clear visual cues) تساعد المستخدمين على التمييز بين العناصر التفاعلية وغير التفاعلية (interactive and non-interactive elements) في صفحة الويب.
+        </p>
+        <p>
+            يُعد هذا التمييز جوهرياً لابتكار تجربة تصفح بديهية وسهلة الاستخدام (user-friendly).
+        </p>
+
+        <p class="hinty">
+            لننظر في الأنماط الافتراضية الأساسية للروابط (basic default styles for links) :
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:link</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+}</span>
+
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">purple</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview1">
+                    <a href="#">رابط مثال</a>
+                </div>
+            </div>
+
+            <p>
+                تؤدي هذه الأساليب وظائف مهمة (important functions) عديدة.
+            </p>
+            <p>
+                أولاً، يبرز اللون الأزرق المخصص للروابط غير المُزارة (unvisited links) بوضوح مقابل معظم ألوان الخلفية والنصوص، مما يجعل تمييز هذه الروابط أمراً سهلاً؛ ويُعد هذا التباين (contrast) أمراً بالغ الأهمية لتمكين المستخدمين من مسح الصفحة ضوئياً (scan a page) بسرعة والعثور على عناصر التنقل (navigational elements) أو المعلومات المهمة.
+            </p>
+            <p>
+                يُعزز الخط السفلي (underline) التأكيد (emphasizes) على أن النص قابل للنقر (clickable)، مما يوفر إشارة بصرية إضافية؛ ويُعد هذا مفيداً بشكل خاص للمستخدمين الذين يعانون من عمى الألوان أو يجدون صعوبة في التمييز بين الألوان.
+            </p>
+            <p>
+                يساعد تغيير لون الروابط التي تمت زيارتها (visited links) (عادةً إلى اللون الأرجواني) المستخدمين على تتبع الأماكن التي زاروها؛ وتُعد هذه الميزة بالغة الأهمية عند تصفح المواقع الإلكترونية الكبيرة أو إجراء الأبحاث، إذ تحول دون قيام المستخدمين بإعادة زيارة الصفحات نفسها عن غير قصد.
+            </p>
+
+            <p class="hinty">تأمَّل مثال HTML هذا:</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;p&gt;
+ <span class="txt">اعرف المزيد عن</span>
+ &lt;a <span class="attr">href=<span class="value">"https://www.example.com/cats"</span></span>&gt;<span class="txt">القطط</span>&lt;/a&gt;
+ <span class="txt">و</span>
+ &lt;a <span class="attr">href=<span class="value">"https://www.example.com/dogs"</span></span>&gt;<span class="txt">الكلاب</span>&lt;/a&gt;
+&lt;/p&gt;</span>
+            </code></pre></div>
+
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <p>
+                        اعرف المزيد عن
+                        <a href="https://www.example.com/cats" target="_blank">القطط</a>
+                        و
+                        <a href="https://www.example.com/dogs" target="_blank">الكلاب</a>
+                    </p>
+                </div>
+            </div>
+
+            <p>
+                بدون استخدام أي تنسيق CSS مخصص، ستعرض معظم المتصفحات هذه الروابط باللون الأزرق مع خط سفلي. وعند النقر على أحد الروابط (links)، سيتغير لونه إلى الأرجواني، مما يوفر للمستخدم تغذية راجعة (feedback) فورية حول سجل التصفح (browsing history) الخاص به.
+            </p>
+            <p>
+                على الرغم من شيوع قيام المصممين (designers) بتعديل هذه الأنماط الافتراضية (default styles) لتلائم الطابع الجمالي للموقع الإلكتروني، إلا أنه من الضروري الحفاظ على المبادئ الجوهرية (core principles) التي تقوم عليها.
+            </p>
+            <p>
+                إذا اخترت تغيير الأنماط الافتراضية (default styles)، فتأكد من أن الروابط (links) تظل متميزة بوضوح عن النص العادي، ومن وجود فرق مرئي بين الروابط التي تمت زيارتها وتلك التي لم تتم زيارتها (visited and unvisited links)، ومن أن الألوان المختارة توفر تبايناً كافياً (sufficient contrast) مع الخلفية (background).
+            </p>
+
+            <p class="hinty">على سبيل المثال، قد تستخدم نمطاً مخصصاً (custom style) كهذا:</p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:link</span> <span class="attr">{
+ color: <span class="txt">blue</span>;
+ text-decoration: <span class="txt">none</span>;
+ border-bottom: <span class="txt">1px solid blue</span>;
+}</span>
+
+<span class="tag-b">a:visited</span> <span class="attr">{
+ color: <span class="txt">purple</span>;
+ border-bottom: <span class="txt">1px solid purple</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <a href="#1">رابط مثال</a>
+                </div>
+            </div>
+
+            <p>
+                يحافظ هذا على نظام الألوان الأزرق والأرجواني، مع استبدال الخط السفلي (underline) بحدٍّ سفلي (bottom border) لإضفاء مظهر أكثر عصرية.
+            </p>
+
+            <p class="hinty">
+                من المهم أيضاً مراعاة الحالات المختلفة للروابط (different states of links). فبالإضافة إلى الحالة الافتراضية وحالة الرابط المُزار (default and visited states)، عادةً ما تكون للروابط حالات أخرى عند تمرير المؤشر فوقها (hover) وعند تفعيلها (active) :
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;a <span class="attr">href=<span class="value">"/"</span></span>&gt;<span class="txt">رابط مثال</span>&lt;/a&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">a:hover</span> <span class="attr">{
+ color: <span class="txt">red</span>;
+}</span>
+
+<span class="tag-b">a:active</span> <span class="attr">{
+ color: <span class="txt">darkorange</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview4">
+                    <a href="#2">رابط مثال</a>
+                </div>
+            </div>
+
+            <p>
+                توفر هذه الحالات تغذية راجعة فورية للمستخدمين أثناء تفاعلهم مع الروابط، مما يعزز سهولة الاستخدام العامة للموقع.
+            </p>
+            <p>
+                ختاماً، ورغم إمكانية تخصيص أنماط الروابط، ينبغي الحفاظ على المبادئ التي تستند إليها الأنماط الافتراضية.
+            </p>
+            <p>
+                إنها تؤدي دوراً جوهرياً في توفير تجربة ويب قابلة للاستخدام ومتاحة للجميع، مما يساعد المستخدمين على تصفح المحتوى والتفاعل معه بفعالية.
+            </p>
+            <p>
+                اجعل الوضوح وتجربة المستخدم دائمًا على رأس أولوياتك عند تصميم أنماط الروابط (designing link styles) لمواقعك الإلكترونية.
+            </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">لماذا من المهم تخصيص لون مميز (distinct color) للروابط التي تمت زيارتها (visited links) ؟</p>
+
+		<p> 1. يضفي ذلك مزيداً من الألوان على الموقع الإلكتروني. ❌</p>
+        <p><mark> 2. يساعد ذلك المستخدمين على تتبع الصفحات التي زاروها بالفعل. ✅</mark></p>
+        <p> 3. تُعد الروابط التي تمت زيارتها أكثر أهمية من تلك التي لم تتم زيارتها. ❌</p>
+		<p> 4. يُعد ذلك مطلباً قانونياً للمواقع الإلكترونية. ❌</p>
+        <br>
+
+        <p class="userstory">أي مما يلي لا يُعد عادةً النمط الافتراضي للروابط (default style for links) في معظم المتصفحات؟</p>
+
+		<p> 1. اللون الأزرق للروابط غير المُزارة. ❌</p>
+		<p> 2. خط سفلي لجميع الروابط. ❌</p>
+		<p> 3. اللون الأرجواني للروابط المُزارة. ❌</p>
+        <p><mark> 4. خط عريض (Bold) لجميع الروابط. ✅</mark></p>
+        <br>
+
+        <p class="userstory">عند تخصيص أنماط الروابط (customizing link styles)، ما هو المبدأ المهم الذي ينبغي مراعاته؟</p>
+		
+		<p> 1. يجب أن تكون جميع الروابط باللون الأزرق. ❌</p>
+        <p> 2. يجب أن تكون الروابط مُسطَّرة دائمًا. ❌</p>
+        <p><mark> 3. يجب أن تكون الروابط مُميَّزة بوضوح عن النص العادي. ✅</mark></p>
+		<p> 4. يجب أن تشترك الروابط المُزارة وغير المُزارة في النمط نفسه. ❌</p>
+        
+	</section>	
+
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="./How-Do-the-Different-list-style-Properties-Work.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
