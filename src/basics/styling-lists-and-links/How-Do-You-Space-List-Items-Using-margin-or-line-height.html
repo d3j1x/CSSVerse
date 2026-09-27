@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="أساسيات CSS | كيف تضبط المسافات بين عناصر القائمة باستخدام margin أو line-height ؟"/>
+    <link rel="stylesheet" href="../../styles/pagestyles.css">
+    <link rel="stylesheet" href="../../styles/others/basicsStyles/styling-lists-and-links/How-Do-You-Space-List-Items-Using-margin-or-line-height.css">
+    <script src="../../../config.js"></script>
+	<link rel="icon" type="image/x-icon" href="../../../favicon.png">
+	<title>CSSVerse | الأساسيات</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+	<a class="black" href="../index.html">x</a>
+	<h1>تنسيق القوائم (Lists) والروابط (Links)</h1>
+</header>
+
+
+
+
+<main class="box">
+
+
+    <!-- sub-title -->
+	<section class="sub-title">
+        <h2>كيف تضبط المسافات بين عناصر القائمة باستخدام margin أو line-height ؟</h2>
+		<span class="hint">نظري</span>
+        <p></p>
+    </section>
+
+
+    <section>
+        <p>
+            تُعد الهوامش (Margins) ومسافة الأسطر (line-height) ضرورية لضبط المسافات بين عناصر القائمة، وذلك لتعزيز سهولة القراءة والجاذبية البصرية (visual appeal).
+        </p>
+        <p>
+            أولاً، لنبدأ بضبط المسافات بين عناصر القائمة (list items) باستخدام الهوامش (margins) !
+        </p>
+        <p>
+            يمكن استخدام الهوامش (margins) لإنشاء مسافات بين عناصر القائمة (list items) من خلال تطبيق خصائص الهامش (margin properties) على عناصر <span dir="ltr" class="br-spec nw">li</span>. 
+وتتيح لك هذه الطريقة التحكم في المسافة المحيطة بخارج كل عنصر من عناصر القائمة، مما يؤدي فعلياً إلى زيادة أو تقليل الفراغ الفاصل بينها.
+        </p>
+
+        <p class="hinty">
+            لنلقِ نظرةً على مثالٍ لقائمةٍ غير مُرتَّبةٍ (unordered list) تحتوي على ثلاثة عناصر.
+        </p>
+
+        <div class="code-block"><pre><code>
+<span class="tag">&lt;ul&gt;
+ &lt;li&gt;<span class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;<span class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;<span class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+        </code></pre></div>
+
+        <p class="hinty">معاينة:</p>
+        <div class="preview" role="presentation">
+            <div class="preview1">
+                <ul>
+                    <li>العنصر 1</li>
+                    <li>العنصر 2</li>
+                    <li>العنصر 3</li>
+                </ul>
+            </div>     
+        </div>
+        <p>
+            بشكل افتراضي، لن تُطبِّق لغة HTML مسافات كبيرة بين عناصر القائمة (list items).
+        </p>
+        <p class="hinty">
+            لإضافة بعض المسافة أسفل كل عنصر من عناصر القائمة، يمكنك استخدام الخاصية <span dir="ltr" class="br-spec nw">margin-bottom</span> على النحو التالي:
+        </p>
+
+        <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;<span class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;<span class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">li</span> <span class="attr">{
+ margin-bottom: <span class="txt">40px</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview2">
+                    <ul>
+                        <li>العنصر 1</li>
+                        <li>العنصر 2</li>
+                        <li>العنصر 3</li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                في هذا المثال، سيتم تطبيق هامش (margin) بمقدار <span dir="ltr" class="br-spec nw">40px</span> أسفل كل عنصر من عناصر القائمة داخل القائمة غير المرتبة.
+            </p>
+
+            <p>
+                هناك طريقة أخرى للمباعدة بين عناصر القائمة، وهي استخدام الخاصية <span dir="ltr" class="br-spec nw">line-height</span>.
+            </p>
+            <p>
+                تُعدل الخاصية <span dir="ltr" class="br-spec nw">line-height</span> المسافة العمودية (vertical spacing) بين أسطر النص داخل عنصر قائمة واحد (single list item).
+            </p>
+            <p>
+                على الرغم من أن هذا الأمر يؤثر في المقام الأول على المسافة بين أسطر النص داخل كل عنصر، إلا أنه قد يؤثر أيضاً بشكل غير مباشر على المسافة الإجمالية بين عناصر القائمة إذا كانت هذه العناصر تحتوي على سطر نصي واحد فقط.
+            </p>
+            <p>
+                إذا كانت عناصر القائمة تحتوي على أسطر نصية متعددة، فإن خاصية "ارتفاع السطر" <span dir="ltr" class="br-spec nw">line-height</span> ستؤثر على المسافة بين تلك الأسطر، لكنها لا تعدّل بشكل مباشر المسافة بين عناصر القائمة المنفصلة بحد ذاتها (list items themselves).
+            </p>
+            <p>
+                للتحكم في المسافات بين عناصر القائمة الفردية، يمكنك استخدام خصائص الهامش <span dir="ltr" class="br-spec nw">margin</span> أو الهامش الداخلي <span dir="ltr" class="br-spec nw">padding</span> بدلاً من ذلك.
+            </p>
+
+            <p class="hinty">
+                باستخدام القائمة غير المرتبة نفسها المذكورة سابقاً، إليك مثال على تطبيق خاصية ارتفاع السطر <span dir="ltr" class="br-spec nw">line-height</span> على عناصر القائمة:
+            </p>
+
+            <div class="codeFiles">
+            <p class="file-name">index.html</p>
+            <div class="code-block"><pre><code>
+<span class="tag">&lt;link <span class="attr">rel=<span class="value">"stylesheet"</span> href=<span class="value">"styles.css"</span></span>&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;<span class="txt">العنصر 1</span>&lt;/li&gt;
+ &lt;li&gt;<span class="txt">العنصر 2</span>&lt;/li&gt;
+ &lt;li&gt;<span class="txt">العنصر 3</span>&lt;/li&gt;
+&lt;/ul&gt;</span>
+            </code></pre></div>
+            
+            <p class="file-name">styles.css</p>
+            <div class="code-block"><pre><code>
+<span class="tag-b">li</span> <span class="attr">{
+ line-height: <span class="txt">2</span>;
+}</span>
+            </code></pre></div>
+            </div>
+        
+            <p class="hinty">معاينة:</p>
+            <div class="preview" role="presentation">
+                <div class="preview3">
+                    <ul>
+                        <li>العنصر 1</li>
+                        <li>العنصر 2</li>
+                        <li>العنصر 3</li>
+                    </ul>
+                </div>
+            </div>
+            <p>
+                في هذا المثال، تحدد الخاصية <span dir="ltr" class="br-spec nw">line-height</span> ارتفاع السطر ليكون ضعف حجم الخط، مما يوفر مساحة عمودية (vertical space) أكبر داخل كل عنصر من عناصر القائمة (each list item).
+            </p>
+
+    </section>
+
+    <!-- QUESTIONS -->
+	<section class="questions">
+		<p class="pquestions">أسئلة :</p>
+			
+		<p class="userstory">ما هي خاصية CSS التي ستستخدمها لإنشاء مسافة بين عناصر القائمة عن طريق ضبط المساحة الخارجية لكل عنصر <span dir="ltr" class="br-spec nw">li</span> ؟</p>
+
+		<p> 1. <span dir="ltr" class="br-spec nw">padding</span> ❌</p>
+        <p> 2. <span dir="ltr" class="br-spec nw">line-height</span> ❌</p>
+        <p><mark> 3. <span dir="ltr" class="br-spec nw">margin</span> ✅</mark></p>
+		<p> 4. <span dir="ltr" class="br-spec nw">border</span> ❌</p>
+        <br>
+
+        <p class="userstory">بالنظر إلى قاعدة CSS التالية: <span dir="ltr" class="br-spec nw">li { margin-bottom: 15px; }</span>، ما هو التأثير الذي تحدثه هذه القاعدة على عناصر القائمة؟</p>
+		
+		<p> 1. يضيف مسافة <span dir="ltr" class="br-spec nw">15px</span> داخل كل عنصر من عناصر القائمة. ❌</p>
+        <p> 2. يضيف مسافة <span dir="ltr" class="br-spec nw">15px</span> بين المحتوى وحدود كل عنصر من عناصر القائمة. ❌</p>
+        <p><mark> 3. يضيف مسافة <span dir="ltr" class="br-spec nw">15px</span> أسفل كل عنصر من عناصر القائمة. ✅</mark></p>
+		<p> 4. يضيف مسافة <span dir="ltr" class="br-spec nw">15px</span> أعلى كل عنصر من عناصر القائمة. ❌</p>
+        <br>
+
+        <p class="userstory">ما الذي تتحكم فيه خاصية <span dir="ltr" class="br-spec nw">line-height</span> في CSS؟</p>
+		
+		<p> 1. عرض <span dir="ltr" class="br-spec nw">width</span> المحتوى. ❌</p>
+        <p> 2. المساحة الواقعة داخل حدود العنصر <span dir="ltr" class="br-spec nw">border</span>. ❌</p>
+        <p><mark> 3. المسافة العمودية (vertical spacing) بين أسطر النص داخل العنصر. ✅</mark></p>
+		<p> 4. المساحة الواقعة خارج حدود العنصر <span dir="ltr" class="br-spec nw">border</span>. ❌</p>
+	</section>
+
+    
+
+
+    <!-- Pages -->
+    <section class="page-nav">
+        <a class="prev" href="../css-fundamentals-quiz/CSS-Fundamentals-Quiz.html">&#8594; السابق</a>
+        <a class="next" href="#">التالي &#8592;</a>
+    </section>
+
+</main>
+
+<!--Start Footer-->
+    <footer>
+      <p>جميع الحقوق محفوظة <span dir="ltr">CSSVerse 2026 - 2027 ©</span></p>
+      
+      <p class="support"><strong>مدعومة من منظمة <a id="myLink" target=__blank>التقنية العربية المفتوحة Open Arab Tech</a></strong></p>
+    </footer>
+<!--Ends Footer-->
+
+<script>
+  document.getElementById("myLink").href = SITE_LINK;
+</script>
+
+</body>
+</html>
